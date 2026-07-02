@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dreamslates.vercel.app/sitemap.xml

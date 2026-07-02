@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#311042;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" />
+  
+  <!-- Subtle design grids -->
+  <g stroke="white" stroke-opacity="0.03" stroke-width="1">
+    <line x1="0" y1="337.5" x2="1200" y2="337.5" />
+    <line x1="600" y1="0" x2="600" y2="675" />
+    <circle cx="600" cy="337.5" r="250" fill="none" stroke-opacity="0.04" stroke-width="2" />
+    <circle cx="600" cy="337.5" r="150" fill="none" stroke-opacity="0.06" stroke-dasharray="5,5" />
+  </g>
+  
+  <g fill="white" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">
+    <!-- Icon/Graphic -->
+    <path d="M600,180 L630,230 L680,230 L640,260 L655,310 L600,280 L545,310 L560,260 L520,230 L570,230 Z" fill="url(#text-gradient)" opacity="0.8" />
+    
+    <!-- Branding Text -->
+    <text x="600" y="370" font-size="36" font-weight="900" letter-spacing="6" fill="url(#text-gradient)">D R E A M S L A T E S</text>
+    <text x="600" y="410" font-size="16" fill-opacity="0.4" font-weight="500">PREMIUM AI WALLPAPER CORE</text>
+    
+    <!-- Status Text -->
+    <rect x="420" y="460" width="360" height="40" fill="black" fill-opacity="0.3" rx="20" stroke="white" stroke-opacity="0.08" />
+    <text x="600" y="485" font-size="13" font-weight="600" fill="#a5b4fc" fill-opacity="0.9">Image loading offline or unavailable</text>
+  </g>
+</svg>
