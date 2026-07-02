@@ -208,8 +208,8 @@ To deploy your own copy:
 # Future Improvements
 
 - User authentication
-- Cloud synchronization for favorites
 - AI prompt enhancement
+- Cloud synchronization
 - Wallpaper collections
 - Community sharing
 - Theme customization
