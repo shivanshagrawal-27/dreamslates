@@ -1,6 +1,6 @@
 # Dreamslates
 
-A modern AI-powered wallpaper generation platform built with **Next.js 15**, featuring a premium glassmorphism interface, AI provider integration, inspiration gallery, secure Bring Your Own API Key (BYOK) architecture, and a production-ready user experience.
+A modern wallpaper generation platform built with **Next.js 15**, **TypeScript**, and **Tailwind CSS**. Dreamslates provides a premium interface for generating AI wallpapers using a secure **Bring Your Own API Key (BYOK)** approach, allowing users to connect their preferred AI provider directly from the browser.
 
 **Live Demo:** https://dreamslates.vercel.app
 
@@ -8,238 +8,226 @@ A modern AI-powered wallpaper generation platform built with **Next.js 15**, fea
 
 ## Overview
 
-Dreamslates allows users to generate high-quality AI wallpapers using their preferred AI provider while keeping API keys private and under their own control.
+Dreamslates is designed to make AI wallpaper generation simple, fast, and visually appealing without relying on a centralized backend.
 
-Instead of relying on a single paid backend, the platform follows a **Bring Your Own API Key (BYOK)** model. Users can securely connect their preferred provider (such as Hugging Face, OpenAI, Gemini, Stability AI, or Replicate) directly from the browser and generate wallpapers without exposing credentials publicly.
+Instead of requiring users to use a shared API service, the platform follows a **Bring Your Own API Key (BYOK)** architecture. Users can securely connect their preferred AI provider, generate wallpapers, browse inspiration from Pexels, save favorites locally, and download wallpapers through an intuitive, glassmorphism-inspired interface.
 
-The project focuses on clean UI, modular architecture, responsiveness, and a production-ready developer experience.
-
----
-## Preview
-
-
----
-## Features
-
-### AI Wallpaper Generator
-
-- Conversational AI wallpaper generation interface
-- Intelligent prompt enhancement
-- Multiple aspect ratios
-- Responsive preview experience
-- Download generated wallpapers
-
-### Bring Your Own API Key (BYOK)
-
-Users can securely connect their own AI provider.
-
-Supported providers:
-
-- Hugging Face FLUX.1
-- OpenAI DALL·E 3
-- Gemini Imagen
-- Stability AI
-- Replicate FLUX
-
-API keys are stored locally inside the user's browser and are never exposed publicly.
+The project emphasizes clean UI design, modular architecture, responsiveness, and production-ready code quality.
 
 ---
 
-### Provider Connection
+# Preview
 
-- One-click provider selection
-- Secure API key input
-- Connection status indicator
-- Test Connection feature
-- Automatic provider switching
+### Home
 
----
+![Home](assets/home.png)
+
+### AI Generator
+
+![Generator](assets/generator.png)
 
 ### Inspiration Gallery
 
-Powered by the Pexels API.
+![Gallery](assets/gallery.png)
 
-Features include:
+### Contact
 
-- Search wallpapers
-- Category browsing
-- Infinite scrolling
-- Responsive masonry layout
-- High-quality inspiration images
+![Contact](assets/contact.png)
 
 ---
 
-### User Experience
+# Features
 
-- Dark premium interface
-- Glassmorphism design
-- Responsive on desktop and mobile
-- Smooth animations
-- Fast navigation
-- Accessible layout
+## AI Wallpaper Generator
 
----
-
-### Personalization
-
-- Favorites
-- Wallpaper history
-- Local collections
-- Theme switching
-- Persistent browser storage
+- Conversational prompt-based wallpaper generation
+- Support for multiple AI providers
+- Clean chatbot-style interface
+- Prompt history
+- Quick regenerate workflow
+- Download generated wallpapers
 
 ---
 
-### Security
+## Bring Your Own API Key (BYOK)
 
-- Browser-side API key storage
-- Prompt moderation
-- Safe generation workflow
-- No exposed private credentials
+Dreamslates never requires users to share API keys with a third-party server.
 
----
+Supported providers include:
 
-## Tech Stack
-
-### Frontend
-
-- Next.js 15 (App Router)
-- React
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-
-### State Management
-
-- Zustand
-
-### AI Providers
-
-- Hugging Face
-- OpenAI
-- Gemini
+- Hugging Face (FLUX.1)
+- OpenAI DALL·E 3
+- Gemini Imagen
 - Stability AI
-- Replicate
+- Replicate FLUX.1
 
-### External APIs
-
-- Pexels API
-
-### Deployment
-
-- Vercel
+API credentials are stored locally in the browser for a secure user experience.
 
 ---
 
-## Project Structure
+## Inspiration Gallery
 
-```
-app/
-components/
-lib/
-store/
-public/
-types/
-```
+Powered by the **Pexels API**, the gallery includes:
 
-The project follows a modular architecture where providers, UI components, API routes, and state management remain isolated for maintainability.
+- High-quality wallpaper discovery
+- Infinite scrolling
+- Search functionality
+- Responsive image grid
+- One-click downloads
 
 ---
 
-## Local Setup
+## Favorites
 
-Clone the repository
+- Save wallpapers locally
+- Persistent storage using Zustand
+- Instant access to saved wallpapers
+
+---
+
+## User Experience
+
+- Glassmorphism-inspired interface
+- Fully responsive layout
+- Smooth page transitions
+- Framer Motion animations
+- Dark theme optimized for desktop and mobile
+
+---
+
+## Safety & Validation
+
+- Prompt moderation
+- Provider validation
+- Secure client-side key management
+- Error handling with user-friendly feedback
+
+---
+
+# Tech Stack
+
+| Category | Technology |
+|-----------|------------|
+| Framework | Next.js 15 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| State Management | Zustand |
+| Animation | Framer Motion |
+| Icons | Lucide React |
+| Image Source | Pexels API |
+| Deployment | Vercel |
+
+---
+
+# Project Structure
+
+```text
+app/            Next.js App Router pages
+components/     Reusable UI components
+lib/            API integrations and utilities
+store/          Zustand state management
+types/          TypeScript definitions
+public/         Static assets
+```
+
+---
+
+# Getting Started
+
+## Clone the repository
 
 ```bash
 git clone https://github.com/shivanshagrawal-27/dreamslates.git
 ```
 
-Move into the project
+## Navigate to the project
 
 ```bash
 cd dreamslates
 ```
 
-Install dependencies
+## Install dependencies
 
 ```bash
 npm install
 ```
 
-Run the development server
+## Configure environment variables
+
+Create a `.env.local` file in the project root.
+
+```env
+OPENAI_API_KEY=
+PEXELS_API_KEY=
+GEMINI_API_KEY=
+STABILITY_API_KEY=
+REPLICATE_API_TOKEN=
+```
+
+Only configure the providers you intend to use.
+
+---
+
+## Run the development server
 
 ```bash
 npm run dev
 ```
 
-Open
+Then open:
 
 ```
 http://localhost:3000
 ```
 
+> If port **3000** is unavailable, Next.js will automatically use the next available port.
+
 ---
 
-## Environment Variables
+## Build for Production
 
-Create a `.env.local` file if you want to configure server-side providers.
-
-```env
-OPENAI_API_KEY=
-
-PEXELS_API_KEY=
-
-GEMINI_API_KEY=
-
-STABILITY_API_KEY=
-
-REPLICATE_API_TOKEN=
+```bash
+npm run build
 ```
 
-The deployed version also supports connecting API keys directly from the browser using the BYOK interface.
+---
+
+# Deployment
+
+Dreamslates is deployed on **Vercel**.
+
+To deploy your own copy:
+
+1. Fork or clone this repository.
+2. Import the project into Vercel.
+3. Configure the required environment variables.
+4. Deploy.
 
 ---
 
-## Live Demo
+# Future Improvements
 
-Production Deployment
-
-https://dreamslates.vercel.app
-
-GitHub Repository
-
-https://github.com/shivanshagrawal-27/dreamslates
-
----
-
-## Future Improvements
-
-- Authentication
-- Cloud wallpaper sync
-- AI prompt templates
+- User authentication
+- Cloud synchronization for favorites
+- AI prompt enhancement
 - Wallpaper collections
 - Community sharing
-- Usage analytics
-- Additional AI providers
+- Theme customization
+- Download analytics
 
 ---
 
-## Author
+# Author
 
 **Shivansh Agrawal**
 
 B.Tech CSE (Data Science)
 
-GitHub
-
+GitHub  
 https://github.com/shivanshagrawal-27
 
-LinkedIn
-
-https://www.linkedin.com/in/shivansh-agrawal-27/
+LinkedIn  
+https://www.linkedin.com/in/shivanshcodes/
 
 ---
 
-## License
-
-This project is intended for educational and portfolio purposes.
