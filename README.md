@@ -177,10 +177,10 @@ npm run dev
 Then open:
 
 ```
-http://localhost:3000
+http://localhost:3004
 ```
 
-> If port **3000** is unavailable, Next.js will automatically use the next available port.
+> If port **3004** is unavailable, Next.js will automatically use the next available port.
 
 ---
 
